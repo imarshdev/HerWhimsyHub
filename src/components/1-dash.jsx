@@ -5,7 +5,9 @@ import flower from "../assets/flower.svg";
 import paint from "../assets/paint.svg";
 import present from "../assets/present.svg";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 export default function Dash() {
+  const navigate = useNavigate();
   useEffect(() => {
     document.title = "CupCake | Dashboard";
   }, []);
@@ -29,7 +31,7 @@ export default function Dash() {
     <>
       <div className="container">
         <img src={bear} style={{ width: "20%" }} />
-        <div style={menuItem}>
+        <div style={menuItem} onClick={() => navigate("/compliments")}>
           <span style={optionStyle}>1. Compliments</span>
           <img src={flower} style={{ width: "20%" }} />
         </div>
