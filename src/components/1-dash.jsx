@@ -66,6 +66,8 @@ export default function Dash() {
           <span style={optionStyle}>5. Some Box</span>
           <GiBoxingGloveSurprise size="3rem" />
         </div>
+        <br />
+        <br />
         <div style={styles.gamepadContainer}>
           {/* D-Pad (Cross buttons) */}
           <div style={styles.dpadContainer}>
@@ -99,7 +101,7 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    width: "70%",
+    width: "95%",
     flexDirection: "row",
     marginTop: "20px", // Added margin for some space above the gamepad
   },
@@ -111,7 +113,7 @@ const styles = {
   },
   dpadRow: {
     display: "flex",
-    width: "10rem",
+    width: "14rem",
     justifyContent: "space-between",
   },
   dpadButton: {
@@ -121,8 +123,8 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: "4rem",
-    height: "2.5rem", // Make the D-pad buttons larger
+    width: "50%",
+    height: "4rem", // Make the D-pad buttons larger
     boxShadow: "1px 1.5px 3px #000000",
     padding: "5px",
     transition: "all 0.2s ease-in-out", // Add smooth transition
@@ -130,8 +132,7 @@ const styles = {
   roundButton: {
     backgroundColor: "purple",
     border: "solid 1px purple",
-    borderRadius: "50%",
-    width: "4.5rem", // Increased size for better prominence
+    width: "6rem", // Increased size for better prominence
     height: "4.5rem", // Increased size
     fontSize: "30px",
     color: "#fff",

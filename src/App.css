@@ -27,8 +27,8 @@ span:focus {
 }
 
 .container {
-  width: 30rem;
-  height: 90vh;
+  width: 35rem;
+  height: 95vh;
   background-color: #fff;
   border-radius: 10px;
   display: flex;
