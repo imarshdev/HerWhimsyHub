@@ -1,8 +1,3 @@
-@font-face {
-  font-family: menu;
-  src: url(./fonts/EmilysCandy-Regular.ttf);
-}
-
 #root {
   max-width: 1280px;
   margin: 0 auto;

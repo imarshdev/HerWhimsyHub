@@ -9,7 +9,7 @@ import { FaAngleDoubleDown, FaAngleDoubleUp } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Dash() {
+export default function Dash({ fontFamily }) {
   const navigate = useNavigate();
   const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -104,7 +104,8 @@ export default function Dash() {
     <>
       <div className="container">
         <h2 style={heading}>Purr !!!</h2>
-        <div style={menuItem} onClick={() => navigate(options[0].path)}>
+        <br />
+        <div style={menuItem} onClick={() => setSelectedIndex(0)}>
           <span
             style={{
               ...optionStyle,
@@ -114,10 +115,10 @@ export default function Dash() {
           >
             1. Compliments
           </span>
-          <GiButterflyFlower size="3rem" />
+          <GiButterflyFlower size="3rem" color="#e91e63" />
         </div>
-        <div style={menuItem} onClick={() => navigate(options[1].path)}>
-          <SiWondersharefilmora size="3rem" />
+        <div style={menuItem} onClick={() => setSelectedIndex(1)}>
+          <SiWondersharefilmora size="3rem" color="8a2be2" />
           <span
             style={{
               ...optionStyle,
@@ -128,7 +129,7 @@ export default function Dash() {
             2. Movie Dates
           </span>
         </div>
-        <div style={menuItem} onClick={() => navigate(options[2].path)}>
+        <div style={menuItem} onClick={() => setSelectedIndex(2)}>
           <span
             style={{
               ...optionStyle,
@@ -138,10 +139,10 @@ export default function Dash() {
           >
             3. Recipes
           </span>
-          <GiHotMeal size="3rem" />
+          <GiHotMeal size="3rem" color="#ff6347"/>
         </div>
-        <div style={menuItem} onClick={() => navigate(options[3].path)}>
-        <PiPaintBrushDuotone size="3rem" />
+        <div style={menuItem} onClick={() => setSelectedIndex(3)}>
+          <PiPaintBrushDuotone size="3rem" color="#008080"/>
           <span
             style={{
               ...optionStyle,
@@ -152,7 +153,7 @@ export default function Dash() {
             4. Shinah's Gallery
           </span>
         </div>
-        <div style={menuItem} onClick={() => navigate(options[4].path)}>
+        <div style={menuItem} onClick={() => setSelectedIndex(4)}>
           <span
             style={{
               ...optionStyle,
@@ -162,9 +163,8 @@ export default function Dash() {
           >
             5. Some Box
           </span>
-          <GiBoxingGloveSurprise size="3rem" />
+          <GiBoxingGloveSurprise size="3rem" color="#daa520"/>
         </div>
-
         <br />
         <br />
         <div style={styles.gamepadContainer}>
