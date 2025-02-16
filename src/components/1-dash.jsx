@@ -1,9 +1,16 @@
-import meal from "../assets/mealplate.svg";
-import bear from "../assets/bear.svg";
-import movie from "../assets/movie.svg";
-import flower from "../assets/flower.svg";
-import paint from "../assets/paint.svg";
-import present from "../assets/present.svg";
+import {
+  GiButterflyFlower,
+  GiHotMeal,
+  GiBoxingGloveSurprise,
+} from "react-icons/gi";
+import { PiPaintBrushDuotone } from "react-icons/pi";
+import { SiWondersharefilmora } from "react-icons/si";
+import {
+  FaAngleDoubleDown,
+  FaAngleDoubleLeft,
+  FaAngleDoubleRight,
+  FaAngleDoubleUp,
+} from "react-icons/fa";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 export default function Dash() {
@@ -26,40 +33,112 @@ export default function Dash() {
     width: "100%",
     display: "flex",
     justifyContent: "center",
+    alignItems: "center",
   };
   const heading = {
-    margin: "0"
-  }
+    margin: "0",
+  };
   return (
     <>
       <div className="container">
-        <img src={bear} style={{ width: "20%" }} />
         <h2 style={heading}>Purr !!!</h2>
         <div style={menuItem} onClick={() => navigate("/compliments")}>
           <span style={optionStyle}>1. Compliments</span>
-          <img src={flower} style={{ width: "20%" }} />
+          <GiButterflyFlower size="3rem" />
         </div>
         <div style={menuItem}>
-          <img src={movie} style={{ width: "20%" }} />
+          <SiWondersharefilmora size="3rem" />
           <span style={optionStyle}>2. Movie Dates</span>
         </div>
         <div style={menuItem}>
           <span style={optionStyle}>3. Recipes</span>
-          <img src={meal} style={{ width: "20%" }} />
+          <GiHotMeal size="3rem" />
         </div>
         <div style={menuItem}>
-          <img src={paint} style={{ height: "4rem" }} />
+          <PiPaintBrushDuotone size="3rem" />
           <span style={optionStyle}>4. Shinah's Gallery</span>
         </div>
         <div style={menuItem}>
           <span style={optionStyle}>5. Some Box</span>
-          <img src={present} style={{ height: "4rem" }} />
+          <GiBoxingGloveSurprise size="3rem" />
         </div>
-        <div>
+        <br />
+        <br />
+        <div style={styles.gamepadContainer}>
+          {/* D-Pad (Cross buttons) */}
+          <div style={styles.dpadContainer}>
+            <button style={styles.dpadButton}>
+              <FaAngleDoubleUp size={24} />
+            </button>
+            <div style={styles.dpadRow}>
+              <button style={styles.dpadButton}>
+                <FaAngleDoubleLeft size={24} />
+              </button>
+              <button style={styles.dpadButton}>
+                <FaAngleDoubleRight size={24} />
+              </button>
+            </div>
+            <button style={styles.dpadButton}>
+              <FaAngleDoubleDown size={24} />
+            </button>
+          </div>
+
+          {/* Big Round Button */}
+          <button
+            style={styles.roundButton}
+            onClick={() => handleButtonClick("Action")}
+          >
+            ●
+          </button>
         </div>
       </div>
     </>
   );
 }
 
-
+// Styles for the gamepad controls
+const styles = {
+  gamepadContainer: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "65%",
+    flexDirection: "row",
+  },
+  dpadContainer: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  dpadRow: {
+    display: "flex",
+    width: "10rem",
+    justifyContent: "space-between",
+  },
+  dpadButton: {
+    backgroundColor: "transparent",
+    margin: "5px",
+    cursor: "pointer",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "4rem",
+    boxShadow: "1px 1.5px 3px #000000",
+    padding: "5px",
+  },
+  roundButton: {
+    backgroundColor: "purple",
+    border: "solid 1px purple",
+    borderRadius: "50%",
+    width: "70px",
+    height: "70px",
+    fontSize: "30px",
+    color: "#fff",
+    cursor: "pointer",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    boxShadow: "1px 1.5px 3px #000000",
+  },
+};
