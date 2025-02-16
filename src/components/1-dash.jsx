@@ -13,11 +13,13 @@ import {
 } from "react-icons/fa";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+
 export default function Dash() {
   const navigate = useNavigate();
   useEffect(() => {
     document.title = "CupCake | Dashboard";
   }, []);
+
   const optionStyle = {
     width: "60%",
     height: "3rem",
@@ -29,6 +31,7 @@ export default function Dash() {
     margin: "10px 20px",
     boxSizing: "border-box",
   };
+
   const menuItem = {
     width: "100%",
     display: "flex",
@@ -38,6 +41,7 @@ export default function Dash() {
   const heading = {
     margin: "0",
   };
+
   return (
     <>
       <div className="container">
@@ -62,8 +66,6 @@ export default function Dash() {
           <span style={optionStyle}>5. Some Box</span>
           <GiBoxingGloveSurprise size="3rem" />
         </div>
-        <br />
-        <br />
         <div style={styles.gamepadContainer}>
           {/* D-Pad (Cross buttons) */}
           <div style={styles.dpadContainer}>
@@ -84,12 +86,7 @@ export default function Dash() {
           </div>
 
           {/* Big Round Button */}
-          <button
-            style={styles.roundButton}
-            onClick={() => handleButtonClick("Action")}
-          >
-            ●
-          </button>
+          <button style={styles.roundButton}>●</button>
         </div>
       </div>
     </>
@@ -102,8 +99,9 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    width: "65%",
+    width: "70%",
     flexDirection: "row",
+    marginTop: "20px", // Added margin for some space above the gamepad
   },
   dpadContainer: {
     display: "flex",
@@ -124,15 +122,17 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     width: "4rem",
+    height: "2.5rem", // Make the D-pad buttons larger
     boxShadow: "1px 1.5px 3px #000000",
     padding: "5px",
+    transition: "all 0.2s ease-in-out", // Add smooth transition
   },
   roundButton: {
     backgroundColor: "purple",
     border: "solid 1px purple",
     borderRadius: "50%",
-    width: "70px",
-    height: "70px",
+    width: "4.5rem", // Increased size for better prominence
+    height: "4.5rem", // Increased size
     fontSize: "30px",
     color: "#fff",
     cursor: "pointer",
@@ -140,5 +140,6 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     boxShadow: "1px 1.5px 3px #000000",
+    transition: "all 0.2s ease-in-out", // Smooth transition
   },
 };

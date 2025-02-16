@@ -82,7 +82,7 @@ span:focus {
 
 @media (max-width: 600px) {
   .container {
-    width: 80vw;
-    height: 70vh;
+    width: 95vw;
+    height: 95vh;
   }
 }
