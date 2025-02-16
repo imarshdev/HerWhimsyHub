@@ -139,10 +139,10 @@ export default function Dash({ fontFamily }) {
           >
             3. Recipes
           </span>
-          <GiHotMeal size="3rem" color="#ff6347"/>
+          <GiHotMeal size="3rem" color="#ff6347" />
         </div>
         <div style={menuItem} onClick={() => setSelectedIndex(3)}>
-          <PiPaintBrushDuotone size="3rem" color="#008080"/>
+          <PiPaintBrushDuotone size="3rem" color="#008080" />
           <span
             style={{
               ...optionStyle,
@@ -163,21 +163,25 @@ export default function Dash({ fontFamily }) {
           >
             5. Some Box
           </span>
-          <GiBoxingGloveSurprise size="3rem" color="#daa520"/>
+          <GiBoxingGloveSurprise size="3rem" color="#daa520" />
         </div>
         <br />
         <br />
         <div style={styles.gamepadContainer}>
           {/* D-Pad (Cross buttons) */}
           <button style={styles.dpadButton} onClick={handleDpadUp}>
-            <FaAngleDoubleUp size={24} />
+            <FaAngleDoubleUp size={24} color="#000" />
           </button>
           <button style={styles.dpadButton} onClick={handleDpadDown}>
-            <FaAngleDoubleDown size={24} />
+            <FaAngleDoubleDown size={24} color="#000" />
           </button>
           {/* Big Round Button */}
           <button
-            style={{ ...styles.dpadButton, backgroundColor: "purple" }}
+            style={{
+              ...styles.dpadButton,
+              backgroundColor: "purple",
+              color: "#fff",
+            }}
             onClick={handleEnter}
           >
             ●
