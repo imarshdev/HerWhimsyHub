@@ -17,10 +17,6 @@ span {
   padding-left: 20px;
 }
 
-span:hover {
-  background-color: purple;
-  color: #fff;
-}
 
 span:focus {
   background-color: purple;
