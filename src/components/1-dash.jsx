@@ -55,7 +55,11 @@ export default function Dash() {
           <span style={optionStyle}>5. Some Box</span>
           <img src={present} style={{ height: "4rem" }} />
         </div>
+        <div>
+        </div>
       </div>
     </>
   );
 }
+
+
