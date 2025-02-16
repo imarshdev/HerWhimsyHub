@@ -36,14 +36,37 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: [
-          '**/*.{html,js,css,png,jpg,svg,ico}'
+        runtimeCaching: [
+          {
+            urlPattern: /\/assets\/.*\.svg$/, // Match all SVGs in the /assets folder
+            handler: "CacheFirst", // First try to get from cache
+            options: {
+              cacheName: "svg-assets-cache",
+              expiration: {
+                maxEntries: 50, // Limit the cache to 50 files
+                maxAgeSeconds: 60 * 60 * 24 * 30, // Cache for 30 days
+              },
+            },
+          },
+          {
+            urlPattern: /\/fonts\/.*\.ttf$/, // Match all TTFs in the /assets folder
+            handler: "CacheFirst", // First try to get from cache
+            options: {
+              cacheName: "ttf-assets-cache",
+              expiration: {
+                maxEntries: 50, // Limit the cache to 50 files
+                maxAgeSeconds: 60 * 60 * 24 * 30, // Cache for 30 days
+              },
+            },
+          },
+          {
+            urlPattern: /\.(js|css|html)$/, // General caching for other assets
+            handler: "NetworkFirst",
+            options: {
+              cacheName: "general-assets-cache",
+            },
+          },
         ],
-        globIgnores: [
-          '/node_modules//*',
-          'sw.js',
-          'workbox-*.js'
-        ]
       },
       devOptions: {
         enabled: true, // Enables PWA in development mode

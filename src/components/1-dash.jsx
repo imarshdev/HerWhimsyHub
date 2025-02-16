@@ -27,10 +27,14 @@ export default function Dash() {
     display: "flex",
     justifyContent: "center",
   };
+  const heading = {
+    margin: "0"
+  }
   return (
     <>
       <div className="container">
         <img src={bear} style={{ width: "20%" }} />
+        <h2 style={heading}>Purr !!!</h2>
         <div style={menuItem} onClick={() => navigate("/compliments")}>
           <span style={optionStyle}>1. Compliments</span>
           <img src={flower} style={{ width: "20%" }} />
