@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    background: linear-gradient(to right, #ff6ec4, #7873f5);
+    background: linear-gradient(to bottom, #ff6ec573, #7773f5a8);
     padding: 20px;
     width: 100%;
 }
@@ -107,4 +107,5 @@
     /* Prevents affecting layout */
     width: 100%;
     text-align: center;
+    background-color: #fff;
 }
