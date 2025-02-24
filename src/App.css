@@ -27,6 +27,7 @@ span:focus {
   align-items: center;
   flex-direction: column;
   box-shadow: 1px 1.5px 1.5px purple;
+  overflow: hidden;
 }
 
 .bouncing-button {

@@ -105,7 +105,7 @@ export default function Dash({ fontFamily }) {
       <div className="container">
         <h2 style={heading}>Purr !!!</h2>
         <br />
-        <div style={menuItem} onClick={() => setSelectedIndex(0)}>
+        <div style={menuItem}>
           <span
             style={{
               ...optionStyle,
@@ -117,7 +117,7 @@ export default function Dash({ fontFamily }) {
           </span>
           <GiButterflyFlower size="3rem" color="#e91e63" />
         </div>
-        <div style={menuItem} onClick={() => setSelectedIndex(1)}>
+        <div style={menuItem}>
           <SiWondersharefilmora size="3rem" color="8a2be2" />
           <span
             style={{
@@ -129,7 +129,7 @@ export default function Dash({ fontFamily }) {
             2. Movie Dates
           </span>
         </div>
-        <div style={menuItem} onClick={() => setSelectedIndex(2)}>
+        <div style={menuItem}>
           <span
             style={{
               ...optionStyle,
@@ -141,7 +141,7 @@ export default function Dash({ fontFamily }) {
           </span>
           <GiHotMeal size="3rem" color="#ff6347" />
         </div>
-        <div style={menuItem} onClick={() => setSelectedIndex(3)}>
+        <div style={menuItem}>
           <PiPaintBrushDuotone size="3rem" color="#008080" />
           <span
             style={{
@@ -153,7 +153,7 @@ export default function Dash({ fontFamily }) {
             4. Shinah's Gallery
           </span>
         </div>
-        <div style={menuItem} onClick={() => setSelectedIndex(4)}>
+        <div style={menuItem}>
           <span
             style={{
               ...optionStyle,
